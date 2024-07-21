@@ -9,7 +9,7 @@ def test_wiki(page: Page):
     # time.sleep(1)
     expect(page.get_by_text('Добро пожаловать в Википедию,')).to_be_visible()
 
-def test_wiki_2(page: Page):
+def test_wiki_2(page:Page):
     page.goto('https://www.wikipedia.org/')
     page.get_by_role('link', name='Русский').click()
     page.get_by_role('link', name='Содержание').click()
